@@ -1,6 +1,4 @@
-const url =
-  'https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=';
-
+const url = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=';
 const formDOM = document.querySelector('.form');
 const inputDOM = document.querySelector('.form-input');
 const resultsDOM = document.querySelector('.results');
@@ -10,7 +8,7 @@ formDOM.addEventListener('submit', (e) => {
   const value = inputDOM.value;
   if (!value) {
     resultsDOM.innerHTML =
-      '<div class="error"> please enter valid search term</div>';
+      '<div class="error"> Insira um termo de pesquisa válido!</div>';
     return;
   }
   fetchPages(value);
@@ -24,12 +22,12 @@ const fetchPages = async (searchValue) => {
     const results = data.query.search;
     if (results.length < 1) {
       resultsDOM.innerHTML =
-        '<div class="error">no matching results. Please try again</div>';
+        '<div class="error">Nenhum resultado correspondente. Por favor, tente novamente!</div>';
       return;
     }
     renderResults(results);
   } catch (error) {
-    resultsDOM.innerHTML = '<div class="error"> there was an error...</div>';
+    resultsDOM.innerHTML = '<div class="error"> Havia um erro...</div>';
   }
 };
 

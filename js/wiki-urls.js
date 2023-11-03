@@ -1,5 +1,4 @@
-const url =
-  'https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=searchValue';
+const url = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=20&format=json&origin=*&srsearch=searchValue';
 
 // list=search - executa uma pesquisa de texto completo
 // srsearch="inputValue" - pesquisa por títulos de página ou conteúdo correspondente a esse valor.
